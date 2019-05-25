@@ -2,12 +2,13 @@
 const path = require('path');
 const ora = require('ora');
 const program = require('commander');
-const FolderCreator = require('../lib/FolderCreator');
 const chalk = require('chalk');
+const childProcess = require('child_process')
+const FolderCreator = require('../lib/FolderCreator');
 const question = require('../lib/Question');
 
 program
-  .version('0.0.1')
+  .version(require('../package').version)
   .option('init', 'init a project')
   .option('-T, --template [String]', 'create from template')
   .option('-N, --name [String]', 'input project name')
@@ -42,13 +43,23 @@ async function main () {
     });
 
     creator.init();
+    let cmd = `cd ${projectPath} && npm install`;
+    const spinner = ora('npm install ...');
+    spinner.start();
+    childProcess.exec(cmd, (err, stdout, stderr) => {
+      if (err) {
+        console.log(stderr);
+        console.log(chalk.red(err));
+      } else {
+        console.log(stdout);
+        spinner.stop();
+        console.log(chalk.green('install finished.'));
+      }
+    });
   }
 }
 
-// const spinner = ora('build production\n');
-// spinner.start();
 
 main();
 
-// spinner.stop();
 

@@ -1,6 +1,6 @@
 {
   "name": "@crazymad/crazymad-cli",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "a webpack cli",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/crazymad-tools/crazymad-cli#readme",
   "dependencies": {
     "chalk": "^2.4.2",
+    "child_process": "^1.0.2",
     "commander": "^2.20.0",
     "inquirer": "^6.3.1",
     "ora": "^3.4.0"
