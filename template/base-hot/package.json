@@ -1,14 +1,14 @@
 {
-  "name": "devserver",
-  "version": "0.0.1",
-  "description": "devserver test",
+  "name": "{{name}}",
+  "version": "{{version}}",
+  "description": "{{description}}",
   "main": "index.js",
   "scripts": {
     "build": "node ./build/build.js",
     "dev": "webpack-dev-server --config ./build/webpack.dev.config.js --inline --progress --colors"
   },
-  "author": "crazy_mad",
-  "license": "ISC",
+  "author": "{{author}}",
+  "license": "{{license}}",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "babel-loader": "^8.0.6",

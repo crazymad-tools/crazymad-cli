@@ -15,6 +15,7 @@ module.exports = {
       'webpack.dev.config.js': 'webpack.dev.config.js',
       'webpack.prod.config.js': 'webpack.prod.config.js'
     },
+    'static': {},
     'dist': {},
     'index.html': 'index.html',
     'package.json': 'package.json'

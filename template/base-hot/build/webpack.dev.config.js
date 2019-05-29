@@ -8,15 +8,10 @@ module.exports = merge(baseConfig, {
     publicPath: '/',
     hot: true,
     historyApiFallback: true,
-    proxy: {
-      "^/webapi/**": {
-        target: process.env.TARGET || 'http://dev.hlp.fun:80',
-        changeOrigin: true,
-      }
-    },
-    contentBase: path.join(__dirname, 'app/build'),
+    contentBase: path.join(__dirname, 'static'),
     stats: "errors-only",
-    port: '8085'
+    port: '8085',
+    open: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
