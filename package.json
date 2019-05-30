@@ -27,6 +27,7 @@
     "child_process": "^1.0.2",
     "commander": "^2.20.0",
     "inquirer": "^6.3.1",
+    "npm": "^6.9.0",
     "ora": "^3.4.0"
   }
 }

@@ -3,7 +3,8 @@ const path = require('path');
 const ora = require('ora');
 const program = require('commander');
 const chalk = require('chalk');
-const childProcess = require('child_process')
+const childProcess = require('child_process');
+const npm = require('npm');
 const FolderCreator = require('../lib/FolderCreator');
 const question = require('../lib/Question');
 
@@ -61,5 +62,3 @@ async function main () {
 
 
 main();
-
-
