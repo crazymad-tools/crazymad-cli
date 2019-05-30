@@ -13,6 +13,7 @@ program
   .option('init', 'init a project')
   .option('-T, --template [String]', 'create from template')
   .option('-N, --name [String]', 'input project name')
+  .option('-C --cnpm', 'use cnpm to install')
   .parse(process.argv);
 
 async function main () {
@@ -44,8 +45,9 @@ async function main () {
     });
 
     creator.init();
-    let cmd = `cd ${projectPath} && npm install`;
-    const spinner = ora('npm install ...');
+
+    let cmd = `cd ${projectPath} && ${program.cnpm ? 'cnpm' : 'npm'} install`;
+    const spinner = ora(`${program.cnpm ? 'cnpm' : 'npm'} install ...`);
     spinner.start();
     childProcess.exec(cmd, (err, stdout, stderr) => {
       if (err) {
