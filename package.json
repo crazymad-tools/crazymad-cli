@@ -1,13 +1,14 @@
 {
   "name": "@crazymad/crazymad-cli",
-  "version": "0.0.9",
+  "version": "0.1.1",
   "description": "a webpack cli",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "crazymad-cli": "./bin/crazymad-cli.js"
+    "crazymad-cli": "./bin/crazymad-cli.js",
+    "make-template": "./bin/make-template.js"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,19 @@
   },
   "homepage": "https://github.com/crazymad-tools/crazymad-cli#readme",
   "dependencies": {
+    "archiver": "^3.0.0",
     "chalk": "^2.4.2",
     "child_process": "^1.0.2",
     "commander": "^2.20.0",
+    "copy-dir": "^1.1.0",
+    "fstream": "^1.0.12",
+    "ignore": "^5.1.2",
     "inquirer": "^6.3.1",
     "npm": "^6.9.0",
-    "ora": "^3.4.0"
+    "ora": "^3.4.0",
+    "rimraf": "^2.6.3",
+    "tar": "^4.4.10",
+    "zip-folder": "^1.0.0",
+    "zlib": "^1.0.5"
   }
 }
